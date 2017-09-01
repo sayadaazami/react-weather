@@ -8,6 +8,7 @@ var Main = React.createClass({
 			<div>
 				<Nav />
 				<h1>Main Component</h1>
+				{this.props.children /*this means import content of el here*/}
 			</div>
 		);
 	}

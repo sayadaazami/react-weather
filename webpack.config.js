@@ -15,7 +15,8 @@ module.exports = {
 
         //like psr4
         alias: {
-            //Greeter: 'public/components/Greeter.jsx'
+            Main: 'app/components/Main.jsx',
+            Nav: 'app/components/Nav.jsx'
         },
 
         // do not have to write this extensions on require function

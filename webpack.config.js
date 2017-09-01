@@ -18,7 +18,11 @@ module.exports = {
             Main: 'app/components/Main.jsx',
             Nav: 'app/components/Nav.jsx',
             Weather: 'app/components/Weather.jsx',
-            About: 'app/components/About.jsx'
+            WeatherForm: 'app/components/WeatherForm.jsx',
+            WeatherMessage: 'app/components/WeatherMessage.jsx',
+            About: 'app/components/About.jsx',
+            Examples: 'app/components/Examples.jsx',
+            OpenWeatherMap: 'app/api/OpenWeatherMap.jsx'
         },
 
         // do not have to write this extensions on require function

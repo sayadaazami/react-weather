@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 //get port from env because of heroku
-const PORT = app.process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 //add middleware to forwart HTTPS requests to HTTP becuse weather api does not support https
 app.use(function(req, res, next){

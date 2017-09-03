@@ -46,5 +46,6 @@ module.exports = {
             //witch file excluded
             exclude: /(node_components|bower_components)/
         }]
-    }
+    },
+    devtool: 'cheap-module-eval-source-map', //enable source map for debugging
 };

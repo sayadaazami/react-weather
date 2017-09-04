@@ -1,6 +1,23 @@
+var webpack = require('webpack');
+
 module.exports = {
     //input file
-    entry: './app/app.jsx',
+    entry: [
+        'script!jquery/dist/jquery.min.js', // base is jquery/dist/jquery.min.js but add script! to tel loader load it
+        'script!!foundations-sites/dist/foundation.min.js',
+        './app/app.jsx',
+    ],
+
+    externals: { // provide a set of key value pairs where the is is the module name and the value is the variable name inside external script files
+        jquery: 'jQuery',
+    },
+
+    plugins: [ // define variables like $ to known in app as jquery,...
+        new webpack.ProvidePlugin({
+            '$': 'jquery',
+            'jQuery': 'jquery',
+        })
+    ],
 
     //output file
     output: {

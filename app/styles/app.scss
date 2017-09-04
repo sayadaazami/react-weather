@@ -1,0 +1,9 @@
+$space-large: 12px;
+
+.app-container{
+	padding:  $space-large;
+}
+
+input[type=search], input[type=text]{
+	box-shadow: none;
+}

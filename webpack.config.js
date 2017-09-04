@@ -43,7 +43,7 @@ module.exports = {
             OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
 
             //css alias
-            applicationStyles: 'app/styles/app.css',
+            applicationStyles: 'app/styles/app.scss',
         },
 
         // do not have to write this extensions on require function

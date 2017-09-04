@@ -11,6 +11,7 @@ var Examples = require('Examples');
 // this will load the css use css loader  => css!foundations-sites/dist/foundation.min.css
 // and this will use css into styles use style loader   =>  style!css!foundations-sites/dist/foundation.min.css
 require('css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(
   <Router history={hashHistory}>

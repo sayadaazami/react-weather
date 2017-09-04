@@ -10,7 +10,7 @@ var Weather = React.createClass({
 	},
 	render: function(){
 		return (
-			<div>
+			<div className="text-centered">
 				<WeatherForm onGetWeatherResult={this.getWeatherHandler}/>
 
 				<WeatherMessage message={this.state.weather}/>

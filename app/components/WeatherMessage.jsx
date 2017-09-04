@@ -8,7 +8,9 @@ var WeatherMessage = React.createClass({
 	},
 	render: function(){
 		return (
-			<h3>{this.props.message}</h3>
+			<h3 style={{textAlign: 'center'}}>
+				{this.props.message}
+			</h3>
 		);
 	}
 });

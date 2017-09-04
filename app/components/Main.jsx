@@ -7,8 +7,12 @@ var Main = React.createClass({
 		return (
 			<div>
 				<Nav />
-				<h1>Main Component</h1>
-				{this.props.children /*this means import content of el here*/}
+
+				<div className="row" style={{marginTop: '15px'}}>
+					<div className="columns medium-6 larg-4 small-centered">
+						{this.props.children /*this means import content of el here*/}
+					</div>
+				</div>
 			</div>
 		);
 	}

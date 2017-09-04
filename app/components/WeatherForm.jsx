@@ -1,24 +1,35 @@
 var React = require('react');
 var OpenWeatherMap = require('OpenWeatherMap');
+var ErrorModal = require('ErrorModal');
 
 var WeatherForm = React.createClass({
 	getInitialState: function() {
 		return {
-			isLoading: false
+			isLoading: false,
+			errorMessage:undefined
 		};
 	},
 	render: function(){
-		var {isLoading} = this.state;
+		var {isLoading, errorMessage} = this.state;
 		var myStyle = {display: (isLoading ? 'block' : 'none')}
+
+		function errorMessageData(){
+			if (typeof errorMessage === 'string') {
+				return <ErrorModal message={errorMessage} title={'fetch data error'}/>;
+			}
+		}
 
 		return (
 			<div>
 				<form onSubmit = {this.onSubmit}>
 					<input type="text" ref="txt"/>
-					<button>Get Weather</button>
+
+					<button className="button expanded hollow">Get Weather</button>
 				</form>
 
 				<div style={myStyle}>loading...</div>
+
+				{errorMessageData()}
 			</div>
 		);
 	},
@@ -41,9 +52,8 @@ var WeatherForm = React.createClass({
 				that.props.onGetWeatherResult(temp);
 				that.setState({isLoading: false});
 			},
-			function(err){
-				alert(err);
-				that.setState({isLoading: false});
+			function(e){
+				that.setState({isLoading: false, errorMessage: e.message});
 			}
 		);
 	}

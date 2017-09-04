@@ -4,7 +4,7 @@ module.exports = {
     //input file
     entry: [
         'script!jquery/dist/jquery.min.js', // base is jquery/dist/jquery.min.js but add script! to tel loader load it
-        'script!!foundations-sites/dist/foundation.min.js',
+        'script!!foundation-sites/dist/foundation.min.js',
         './app/app.jsx',
     ],
 

@@ -10,7 +10,7 @@ var Examples = require('Examples');
 //include foundation  =>  we dont use it in webpack config because we will use it in specific Components not all of them...!
 // this will load the css use css loader  => css!foundations-sites/dist/foundation.min.css
 // and this will use css into styles use style loader   =>  style!css!foundations-sites/dist/foundation.min.css
-require('css!foundation-sites/dist/foundation.min.css');
+require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
 ReactDOM.render(

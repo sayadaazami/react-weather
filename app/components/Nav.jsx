@@ -4,13 +4,42 @@ var {Link} = require('react-router');
 // var user = {name:"sayad", lastname:"aazami"}     =>   var {name} = user    => now name equals to "sayad"
 
 var Nav = React.createClass({
+	onWeatherSearch: function(e){
+		e.preventDefault();
+		alert('booom');
+	},
+
 	render: function(){
 		return (
-			<nav>
-				<Link to="/"> Get Weather </Link>
-				<Link to="/about"> About  </Link>
-				<Link to="/examples"> Examples  </Link>
-			</nav>
+			<div className="top-bar">
+				<div className="top-bar-left">
+					<ul className="menu">
+						<li className="menu-text">Weather App</li>
+						<li>
+							<Link to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Get Weather </Link>
+						</li>
+						<li>
+							<Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> About  </Link>
+						</li>
+						<li>
+							<Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Examples  </Link>
+						</li>
+					</ul>
+				</div>
+
+				<div className="top-bar-right">
+					<form onSubmit={this.onWeatherSearch}>
+						<ul className="menu">
+							<li>
+								<input type="search"  placeholder="place name" />
+							</li>
+							<li>
+								<input type="submit"  className="button" value="Get" />
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
 		);
 	}
 });

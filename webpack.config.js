@@ -41,6 +41,9 @@ module.exports = {
             Examples: 'app/components/Examples.jsx',
             ErrorModal: 'app/components/ErrorModal.jsx',
             OpenWeatherMap: 'app/api/OpenWeatherMap.jsx',
+
+            //css alias
+            applicationStyles: 'app/styles/app.css',
         },
 
         // do not have to write this extensions on require function
